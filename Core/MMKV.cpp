@@ -151,6 +151,7 @@ void MMKV::initializeMMKV(const MMKVPath_t &rootDir, MMKVLogLevel logLevel) {
     ThreadLock::ThreadOnce(&once_control, initialize);
 
     g_rootDir = rootDir;
+    // 创建根目录
     mkPath(g_rootDir);
 
     MMKVInfo("root dir: " MMKV_PATH_FORMAT, g_rootDir.c_str());
